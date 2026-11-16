@@ -1,0 +1,14 @@
+Preencha antes de rodar o experimento completo (vai para a secao de Metodologia do artigo)
+
+Maquina usada: Desktop Mateus
+Processador (modelo exato): Intel Core i5-10400F @ 2.90GHz (6 nucleos / 12 threads)
+Memoria RAM total: 16 GB
+Disco (SSD/HDD, modelo se souber): SSD NVMe KINGSTON SNV3S1000G
+Sistema operacional e versao: Windows 10, build 10.0.19045
+Versao do Docker Desktop: 4.99.0 (Engine 29.9.3), backend WSL 2
+Recursos dados ao Docker (CPU/RAM em Settings > Resources): dinamicos (gerenciados pelo WSL 2); conteiner do banco limitado a 2 CPUs e 4 GB pelo docker-compose.yml
+Estava ligado na tomada? (sim/nao): sim (desktop)
+Outros programas abertos durante a execucao: Refazer fechando tudo
+Data e hora de inicio: 
+Data e hora de fim: 
+Observacoes (travou, reiniciou, algo estranho): Nenhuma 

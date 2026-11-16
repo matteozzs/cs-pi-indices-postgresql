@@ -1,0 +1,20 @@
+# Ambiente fixo do experimento (Equipe 09 - PI Projeto e Pesquisa)
+services:
+  postgres:
+    image: postgres:17.6          # versao fixa, nao trocar durante o experimento
+    container_name: pi_equipe09_pg
+    environment:
+      POSTGRES_USER: pesquisa
+      POSTGRES_PASSWORD: pesquisa
+      POSTGRES_DB: experimento
+    command: ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
+    volumes:
+      - ./config/postgresql.conf:/etc/postgresql/postgresql.conf:ro
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "55432:5432"
+    shm_size: 1g
+    cpus: 2                       # limite fixo de CPU
+    mem_limit: 4g                 # limite fixo de memoria
+volumes:
+  pgdata:
