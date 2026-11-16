@@ -1,0 +1,67 @@
+{
+  "data_hora_inicio": "2026-11-15T18:18:49",
+  "postgres_version": "PostgreSQL 17.6 (Debian 17.6-2.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+  "configuracao": {
+    "server_version": "17.6 (Debian 17.6-2.pgdg13+1)",
+    "shared_buffers": "256MB",
+    "work_mem": "32MB",
+    "maintenance_work_mem": "512MB",
+    "effective_cache_size": "2GB",
+    "random_page_cost": "4",
+    "seq_page_cost": "1",
+    "autovacuum": "off",
+    "jit": "off",
+    "max_parallel_workers_per_gather": "0",
+    "track_io_timing": "on",
+    "shared_preload_libraries": "pg_stat_statements"
+  },
+  "host": {
+    "sistema": "Windows-10-10.0.19045-SP0",
+    "processador": "Intel64 Family 6 Model 165 Stepping 3, GenuineIntel",
+    "cpus_logicas": 12,
+    "python": "3.14.3",
+    "psycopg": "3.3.9"
+  },
+  "parametros_execucao": {
+    "volumes": "100000,1000000,10000000",
+    "reps": 30,
+    "aquecimento": 5,
+    "reps_frio": 5,
+    "sem_frio": false,
+    "reps_escrita": 15,
+    "lote": 10000,
+    "sem_escrita": false,
+    "rapido": false,
+    "host": "localhost",
+    "porta": "55432",
+    "banco": "experimento",
+    "usuario": "pesquisa",
+    "container": "pi_equipe09_pg",
+    "cmd_parar": "docker stop -t 30 pi_equipe09_pg",
+    "cmd_iniciar": "docker start pi_equipe09_pg",
+    "cmd_limpar_cache": "docker run --rm --privileged alpine:3.20 sh -c sync; echo 3 > /proc/sys/vm/drop_caches"
+  },
+  "observacao": "Preencha em ambiente_manual.txt o modelo da CPU, RAM e tipo de disco da maquina.",
+  "hardware": {
+    "cpu": "Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz",
+    "nucleos": 6,
+    "threads": 12,
+    "ram_gb": 15.9,
+    "pentes_ram": [
+      "8 GB @ 2666 MHz",
+      "8 GB @ 2666 MHz"
+    ],
+    "discos": [
+      "WDC WD10EURX-63FH1Y0 | Unspecified | SATA | 932 GB",
+      "KINGSTON SNV3S1000G | SSD | NVMe | 932 GB"
+    ],
+    "sistema": "Microsoft Windows 10 Pro 10.0.19045"
+  },
+  "docker": {
+    "versao": "cliente 29.9.3 / servidor 29.9.3",
+    "vm": "Docker Desktop | 12 CPUs | 8280358912 bytes",
+    "limites_conteiner": "NanoCpus=2000000000 Memory=4294967296 Image=postgres:17.6"
+  },
+  "data_hora_fim": "2026-11-15T18:49:07",
+  "duracao_min": 30.2
+}
